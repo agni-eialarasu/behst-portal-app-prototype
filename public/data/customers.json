@@ -1,0 +1,20 @@
+[
+  {
+    "aliasId": "cus-1",
+    "status": "active",
+    "imageUri": "media/avatars/300-7.jpg",
+    "role": "customer",
+    "name": "C-Marek",
+    "mainContactName": "Brad Squires",
+    "mainContactEmail": "bsquires@c-merak.ca",
+    "mainContactPhone": "306-123-4567",
+    "accountingContactName": "Sherry",
+    "accountingContactEmail": "sherry@c-merak.ca",
+    "accountingContactPhone": "306-873-1364",
+    "deliveryContactName": "Rod",
+    "deliveryContactEmail": "rod@c-merak.ca",
+    "deliveryContactPhone": "306-321-4567",
+    "billingAddress": "Box 300, Tisdale, SK-S0E-1T0",
+    "shippingAddress": "5km West of Tisdale, Saskatchewan, SK-S0E-1T0"
+  }
+]

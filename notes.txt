@@ -1,0 +1,80 @@
+Application Name: Behst Portal (Spell as Best Portal)
+
+Client Website URL: https://behstco.com/
+
+Role:
+    System Admin    - System Administrator
+    Manager         - System Manager
+    Sales Executive - Sales Person
+    Customer        - Customer
+
+A. Sign In & Sign Out
+    1. Land on SignIn page
+    2. Get email and password from user
+    3. Trigger SigIn action
+    4. Land on signed-in user dashboard
+    5. Trigger Profile page and view profile
+        5.1 Show profile details
+    6. Trigger SignOut action
+    7. Land on SignIn Page
+
+B. Generate Quote
+    1. Save Quotation
+        1. Sign In as Sales user
+        2. Land on Sales user dashboard
+        3. Search product from the universal search
+            3.1 land on search results
+            3.2 choose product from the search results
+            3.3 Add product to quotation bag
+                3.3.1 Modify parameters (like quantity, price etc.)
+                3.3.2 Preview quote as PDF
+                3.3.3 Save the quote
+        4. Back to search results
+
+    2. Quotation Bag
+        1. All as A except step 4
+        2. Search for the customers and land on search results
+        3. Choose a customer from the results and assign for this quotation
+
+    3. Send quotation
+        1. All as A and B
+        2. Send to the customers
+
+    4. Land on dashboard
+
+
+
+
+
+Name, Date, Exp. Date
+Select Customer
+
+Add / Remove product
+inline edit quantity and markup
+
+
+
+- product cost/price in quotation and invoice?
+
+Product Attributes
+    - name
+    - description
+    - type (inventory/non-inventory/service)
+    - cost
+    - picture
+    - source ( supplier/manufacturer/service-worker)
+    - sku or quantity on hand
+    - model number
+    - manufacturing date
+    - serial number
+
+product meta
+
+product details
+
+product cost
+    key     val
+    cost    10
+    currency usd
+    gst      20
+

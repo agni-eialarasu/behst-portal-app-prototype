@@ -1,0 +1,72 @@
+
+Page-2
+    - My Recent Quotes
+        - What is the parameter to decide the recent quote?
+        - Does recent quotes includes quotes which hase status 'Won'?
+    - Recent Customer Interactions
+        - Here interactions means the user has already worked on the customer instead of viewing info about customer?
+
+    - Need to have proper definition of quote status
+
+
+Page-3
+    - Need to have more detail on Taxes. May be if we have one example tax information
+
+
+Page-4
+    - What is the difference between quantity on hand and sku?
+    - If product type is 'service' then what is the value for SKU or Quantity on hand?
+    - What is the meaning of cost and price?
+
+Page-5
+    - Not able to understand the following line
+        Sales quotes can be linked together to show which quotes are part of the same “project” to be easily identified
+
+Page-6
+    - Activity on the quote need captured in the system
+    - What are all the condition or constraints for editing the quote once it is sent to customer?
+        - What are all attributes are editable?
+    - Need clarification on Dashboard Information
+
+Page-7
+    - Selecting the salesman for creating quote - the signe-in user as the salesperson
+    - Quote revision number
+        - what are all changes becomes new revision
+    - Quote date is created date or modified date
+    - Saving to cloud drive? Is it needed?
+
+Page-8
+    - While create invoice, What is meant by pull cost/price from QuickBook?
+
+Page-10
+    - Why do we need to store quote/invoice/packaging list to cloud drive?
+
+Page-11
+    - What is project? How it has relation with customer and salesman?
+
+Page-12
+    - Is purchase order number and invoice number is same?
+    - Does customer is going to access the portal?
+
+Page-14
+    - My understanding of quote state
+        - New
+        - Ready - what is the condition to come to this state
+
+        - Sent
+            - Re-Quote
+
+        - Long Term/On Hold
+        - Cancel
+            - Lost - Not Interested as reason as confirmation
+            - Not A Fit - accept the reason as confirmation
+
+        - Invoice - accept the signed quote as confirmation
+        - Ship - accept the payment info as confirmation
+        - Won - accept the delivery acknowledgement as confirmation
+
+Page-15
+    - Editing quote on which state are allowed?
+
+Page-16
+    -

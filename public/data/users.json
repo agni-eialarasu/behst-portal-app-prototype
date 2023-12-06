@@ -1,0 +1,13 @@
+[
+  {
+    "id": "-",
+    "aliasId": "usr-1",
+    "status": "active",
+    "imageUri": "media/avatars/300-7.jpg",
+    "role": "salesman",
+    "name": "Max Smith",
+    "email": "maxsmith@gmail.com",
+    "phone": "306-111-4567",
+    "mobile": "306-111-4568"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "aliasId": "prd-1",
+    "status": "active",
+    "name": "Baghouse",
+    "description": "Atque id voluptate tenetur velit et qui eaque dolorem sed perferendis.",
+    "cost": 100,
+    "markupPercent": 0,
+    "imageUri": "1.png"
+  },
+  {
+    "aliasId": "prd-2",
+    "status": "active",
+    "name": "Motor",
+    "description": "Atque id voluptate tenetur velit et qui eaque dolorem sed perferendis.",
+    "cost": 30,
+    "markupPercent": 0,
+    "imageUri": "2.png"
+  },
+  {
+    "aliasId": "prd-3",
+    "status": "active",
+    "name": "Control Panel",
+    "description": "Atque id voluptate tenetur velit et qui eaque dolorem sed perferendis.",
+    "cost": 20,
+    "markupPercent": 0,
+    "imageUri": "3.png"
+  }
+]

@@ -1,0 +1,131 @@
+[
+  {
+    "id": "-",
+    "aliasId": 1066,
+    "name": "Quote One",
+    "status": "new",
+    "date": "Nov 1, 2023",
+    "expiryDate": "Dec 05, 2023",
+    "taxPercent": 5,
+    "customerId": "cus-1",
+    "salesmanId": "usr-1",
+    "items": [
+      {
+        "productId": "prd-1",
+        "itemLabel": "1",
+        "quantity": 1,
+        "cost": 100,
+        "markupPercent": 25
+      },
+      {
+        "productId": "prd-2",
+        "itemLabel": "1,1",
+        "quantity": 1,
+        "cost": 30,
+        "markupPercent": 6
+      },
+      {
+        "productId": "prd-3",
+        "itemLabel": "1,2",
+        "quantity": 1,
+        "cost": 20,
+        "markupPercent": 2
+      }
+    ]
+  },
+  {
+    "id": "-",
+    "aliasId": 1067,
+    "name": "Quote Two",
+    "status": "invoice",
+    "date": "Nov 2, 2023",
+    "expiryDate": "Dec 06, 2023",
+    "taxPercent": 5,
+    "customerId": "cus-1",
+    "salesmanId": "usr-1",
+    "items": [
+      {
+        "productId": "prd-1",
+        "itemLabel": "1",
+        "quantity": 1,
+        "cost": 100,
+        "markupPercent": 20
+      },
+      {
+        "productId": "prd-2",
+        "itemLabel": "1,1",
+        "quantity": 1,
+        "cost": 30,
+        "markupPercent": 5
+      },
+      {
+        "productId": "prd-3",
+        "itemLabel": "1,2",
+        "quantity": 1,
+        "cost": 20,
+        "markupPercent": 2
+      }
+    ]
+  },
+  {
+    "id": "-",
+    "aliasId": 1068,
+    "name": "Quote Three",
+    "status": "shipping",
+    "date": "Nov 3, 2023",
+    "expiryDate": "Dec 07, 2023",
+    "taxPercent": 5,
+    "customerId": "cus-1",
+    "salesmanId": "usr-1",
+    "items": [
+      {
+        "productId": "prd-1",
+        "itemLabel": "1",
+        "quantity": 1,
+        "cost": 100,
+        "markupPercent": 30
+      },
+      {
+        "productId": "prd-2",
+        "itemLabel": "1,1",
+        "quantity": 1,
+        "cost": 30,
+        "markupPercent": 8
+      }
+    ]
+  },
+  {
+    "id": "-",
+    "aliasId": 1069,
+    "name": "Quote Four",
+    "status": "won",
+    "date": "Nov 4, 2023",
+    "expiryDate": "Dec 08, 2023",
+    "taxPercent": 5,
+    "customerId": "cus-1",
+    "salesmanId": "usr-1",
+    "items": [
+      {
+        "productId": "prd-1",
+        "itemLabel": "1",
+        "quantity": 1,
+        "cost": 100,
+        "markupPercent": 25
+      },
+      {
+        "productId": "prd-2",
+        "itemLabel": "1,1",
+        "quantity": 2,
+        "cost": 30,
+        "markupPercent": 6
+      },
+      {
+        "productId": "prd-3",
+        "itemLabel": "1,2",
+        "quantity": 2,
+        "cost": 20,
+        "markupPercent": 2
+      }
+    ]
+  }
+]

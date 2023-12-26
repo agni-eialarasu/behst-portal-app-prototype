@@ -1,3 +1,93 @@
+<script lang="ts">
+import { getAssetPath } from "@/core/helpers/assets";
+import { defineComponent, ref } from "vue";
+import { ErrorMessage, Field, Form as VForm } from "vee-validate";
+import { useAuthStore, type User } from "@/stores/auth";
+import { useRouter } from "vue-router";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import * as Yup from "yup";
+
+export default defineComponent({
+  name: "sign-in",
+  components: {
+    Field,
+    VForm,
+    ErrorMessage,
+  },
+  setup() {
+    const store = useAuthStore();
+    const router = useRouter();
+
+    const submitButton = ref<HTMLButtonElement | null>(null);
+
+    //Create form validation object
+    const login = Yup.object().shape({
+      email: Yup.string().email().required().label("Email"),
+      password: Yup.string().min(4).required().label("Password"),
+    });
+
+    //Form submit function
+    const onSubmitLogin = async (values: any) => {
+      values = values as User;
+      // Clear existing errors
+      store.logout();
+
+      if (submitButton.value) {
+        // eslint-disable-next-line
+        submitButton.value!.disabled = true;
+        // Activate indicator
+        submitButton.value.setAttribute("data-kt-indicator", "on");
+      }
+
+      // Send login request
+      await store.login(values);
+      const error = Object.values(store.errors);
+
+      if (error.length === 0) {
+        // Swal.fire({
+        //   text: "You have successfully logged in!",
+        //   icon: "success",
+        //   buttonsStyling: false,
+        //   confirmButtonText: "Ok, got it!",
+        //   heightAuto: false,
+        //   customClass: {
+        //     confirmButton: "btn fw-semibold btn-light-primary",
+        //   },
+        // }).then(() => {
+        // Go to page after successfully login
+        router.push({ name: "dashboard" });
+        // });
+      } else {
+        Swal.fire({
+          text: error[0] as string,
+          icon: "error",
+          buttonsStyling: false,
+          confirmButtonText: "Try again!",
+          heightAuto: false,
+          customClass: {
+            confirmButton: "btn fw-semibold btn-light-danger",
+          },
+        }).then(() => {
+          store.errors = {};
+        });
+      }
+
+      //Deactivate indicator
+      submitButton.value?.removeAttribute("data-kt-indicator");
+      // eslint-disable-next-line
+      submitButton.value!.disabled = false;
+    };
+
+    return {
+      onSubmitLogin,
+      login,
+      submitButton,
+      getAssetPath,
+    };
+  },
+});
+</script>
+
 <template>
   <!--begin::Wrapper-->
   <div class="w-lg-500px p-10">
@@ -121,92 +211,3 @@
   <!--end::Wrapper-->
 </template>
 
-<script lang="ts">
-import { getAssetPath } from "@/core/helpers/assets";
-import { defineComponent, ref } from "vue";
-import { ErrorMessage, Field, Form as VForm } from "vee-validate";
-import { useAuthStore, type User } from "@/stores/auth";
-import { useRouter } from "vue-router";
-import Swal from "sweetalert2/dist/sweetalert2.js";
-import * as Yup from "yup";
-
-export default defineComponent({
-  name: "sign-in",
-  components: {
-    Field,
-    VForm,
-    ErrorMessage,
-  },
-  setup() {
-    const store = useAuthStore();
-    const router = useRouter();
-
-    const submitButton = ref<HTMLButtonElement | null>(null);
-
-    //Create form validation object
-    const login = Yup.object().shape({
-      email: Yup.string().email().required().label("Email"),
-      password: Yup.string().min(4).required().label("Password"),
-    });
-
-    //Form submit function
-    const onSubmitLogin = async (values: any) => {
-      values = values as User;
-      // Clear existing errors
-      store.logout();
-
-      if (submitButton.value) {
-        // eslint-disable-next-line
-        submitButton.value!.disabled = true;
-        // Activate indicator
-        submitButton.value.setAttribute("data-kt-indicator", "on");
-      }
-
-      // Send login request
-      await store.login(values);
-      const error = Object.values(store.errors);
-
-      if (error.length === 0) {
-        // Swal.fire({
-        //   text: "You have successfully logged in!",
-        //   icon: "success",
-        //   buttonsStyling: false,
-        //   confirmButtonText: "Ok, got it!",
-        //   heightAuto: false,
-        //   customClass: {
-        //     confirmButton: "btn fw-semibold btn-light-primary",
-        //   },
-        // }).then(() => {
-          // Go to page after successfully login
-          router.push({ name: "dashboard" });
-        // });
-      } else {
-        Swal.fire({
-          text: error[0] as string,
-          icon: "error",
-          buttonsStyling: false,
-          confirmButtonText: "Try again!",
-          heightAuto: false,
-          customClass: {
-            confirmButton: "btn fw-semibold btn-light-danger",
-          },
-        }).then(() => {
-          store.errors = {};
-        });
-      }
-
-      //Deactivate indicator
-      submitButton.value?.removeAttribute("data-kt-indicator");
-      // eslint-disable-next-line
-        submitButton.value!.disabled = false;
-    };
-
-    return {
-      onSubmitLogin,
-      login,
-      submitButton,
-      getAssetPath,
-    };
-  },
-});
-</script>

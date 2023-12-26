@@ -2,6 +2,8 @@
 
 Default user/password is admin@demo.com / demo
 
+Metronic theme demos are [here](https://drive.google.com/drive/folders/1qp0WMMYMG3-W5D-6kr7wGfEzZwbf1PCK?usp=drive_link)
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
